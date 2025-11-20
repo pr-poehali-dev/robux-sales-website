@@ -345,7 +345,7 @@ const Index = () => {
               <span className="text-xl font-bold">RobuxShop</span>
             </div>
             <div className="text-sm text-muted-foreground">
-              © 2024 RobuxShop. Все права защищены.
+              © 2024 RobuxShop. Создатель: John_Deo542
             </div>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
