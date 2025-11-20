@@ -55,10 +55,22 @@ const Index = () => {
   }, [toast]);
 
   const packages = [
-    { id: 1, amount: 400, price: 99, badge: 'СТАРТ', popular: false },
-    { id: 2, amount: 800, price: 189, badge: 'ХИТ', popular: true },
-    { id: 3, amount: 1700, price: 349, badge: 'ВЫГОДА', popular: false },
-    { id: 4, amount: 4500, price: 899, badge: 'ПРЕМИУМ', popular: false },
+    { id: 1, amount: 100, price: 29, badge: 'МИНИ', popular: false },
+    { id: 2, amount: 200, price: 55, badge: 'БАЗОВЫЙ', popular: false },
+    { id: 3, amount: 400, price: 99, badge: 'СТАРТ', popular: false },
+    { id: 4, amount: 800, price: 189, badge: 'ХИТ', popular: true },
+    { id: 5, amount: 1000, price: 229, badge: 'ПОПУЛЯРНЫЙ', popular: false },
+    { id: 6, amount: 1700, price: 349, badge: 'ВЫГОДА', popular: false },
+    { id: 7, amount: 2500, price: 499, badge: 'МЕГА', popular: false },
+    { id: 8, amount: 3500, price: 679, badge: 'СУПЕР', popular: false },
+    { id: 9, amount: 4500, price: 899, badge: 'ПРЕМИУМ', popular: false },
+    { id: 10, amount: 6000, price: 1149, badge: 'ЭЛИТ', popular: false },
+    { id: 11, amount: 8000, price: 1499, badge: 'МАСТЕР', popular: false },
+    { id: 12, amount: 10000, price: 1799, badge: 'ЛЕГЕНДА', popular: true },
+    { id: 13, amount: 15000, price: 2599, badge: 'ТИТАН', popular: false },
+    { id: 14, amount: 20000, price: 3399, badge: 'КОРОЛЬ', popular: false },
+    { id: 15, amount: 25000, price: 4099, badge: 'ИМПЕРАТОР', popular: false },
+    { id: 16, amount: 50000, price: 7999, badge: 'МИЛЛИОНЕР', popular: false },
   ];
 
   const reviews = [
