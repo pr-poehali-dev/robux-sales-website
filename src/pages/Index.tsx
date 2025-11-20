@@ -13,12 +13,26 @@ const Index = () => {
   const [selectedPackage, setSelectedPackage] = useState<number | null>(null);
 
   const recentPurchases = [
-    { username: 'ProGamer2024', amount: 800, time: '2 минуты назад' },
-    { username: 'CoolPlayer123', amount: 1700, time: '5 минут назад' },
-    { username: 'MegaBuilder99', amount: 400, time: '8 минут назад' },
-    { username: 'RobloxMaster', amount: 4500, time: '12 минут назад' },
-    { username: 'DiamondHunter', amount: 800, time: '15 минут назад' },
-    { username: 'PixelWarrior', amount: 1700, time: '18 минут назад' },
+    { username: 'ProGamer2024', amount: 800, time: '1 минуту назад' },
+    { username: 'CoolPlayer123', amount: 1700, time: '2 минуты назад' },
+    { username: 'MegaBuilder99', amount: 400, time: '3 минуты назад' },
+    { username: 'RobloxMaster', amount: 4500, time: '4 минуты назад' },
+    { username: 'DiamondHunter', amount: 800, time: '5 минут назад' },
+    { username: 'PixelWarrior', amount: 1700, time: '6 минут назад' },
+    { username: 'ShadowNinja777', amount: 800, time: '7 минут назад' },
+    { username: 'EpicBuilder2023', amount: 4500, time: '8 минут назад' },
+    { username: 'DragonSlayer88', amount: 1700, time: '9 минут назад' },
+    { username: 'LegendPlayer', amount: 800, time: '10 минут назад' },
+    { username: 'UltraGamer456', amount: 400, time: '11 минут назад' },
+    { username: 'FireMaster123', amount: 1700, time: '12 минут назад' },
+    { username: 'IceWarrior99', amount: 800, time: '13 минут назад' },
+    { username: 'ThunderBolt777', amount: 4500, time: '14 минут назад' },
+    { username: 'StarHunter2024', amount: 1700, time: '15 минут назад' },
+    { username: 'GalaxyRacer', amount: 800, time: '16 минут назад' },
+    { username: 'NeonDragon', amount: 400, time: '17 минут назад' },
+    { username: 'BlazeFighter', amount: 1700, time: '18 минут назад' },
+    { username: 'MysticSword', amount: 800, time: '19 минут назад' },
+    { username: 'CrystalKnight', amount: 4500, time: '20 минут назад' },
   ];
 
   useEffect(() => {
