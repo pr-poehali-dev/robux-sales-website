@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -11,6 +11,34 @@ import { useToast } from '@/hooks/use-toast';
 const Index = () => {
   const { toast } = useToast();
   const [selectedPackage, setSelectedPackage] = useState<number | null>(null);
+
+  const recentPurchases = [
+    { username: 'ProGamer2024', amount: 800, time: '2 минуты назад' },
+    { username: 'CoolPlayer123', amount: 1700, time: '5 минут назад' },
+    { username: 'MegaBuilder99', amount: 400, time: '8 минут назад' },
+    { username: 'RobloxMaster', amount: 4500, time: '12 минут назад' },
+    { username: 'DiamondHunter', amount: 800, time: '15 минут назад' },
+    { username: 'PixelWarrior', amount: 1700, time: '18 минут назад' },
+  ];
+
+  useEffect(() => {
+    const showRandomPurchase = () => {
+      const randomPurchase = recentPurchases[Math.floor(Math.random() * recentPurchases.length)];
+      toast({
+        title: '🎉 Новая покупка!',
+        description: `${randomPurchase.username} купил ${randomPurchase.amount} Robux ${randomPurchase.time}`,
+        duration: 4000,
+      });
+    };
+
+    const interval = setInterval(showRandomPurchase, 8000);
+    const initialTimeout = setTimeout(showRandomPurchase, 3000);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(initialTimeout);
+    };
+  }, [toast]);
 
   const packages = [
     { id: 1, amount: 400, price: 99, badge: 'СТАРТ', popular: false },
