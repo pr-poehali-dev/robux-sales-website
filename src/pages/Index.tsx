@@ -11,6 +11,12 @@ import { useToast } from '@/hooks/use-toast';
 const Index = () => {
   const { toast } = useToast();
   const [selectedPackage, setSelectedPackage] = useState<number | null>(null);
+  const [reviews, setReviews] = useState([
+    { id: 1, name: 'Даниил', rating: 5, text: 'Моментальная доставка! Робуксы пришли за 2 минуты', avatar: '🎮' },
+    { id: 2, name: 'Анастасия', rating: 5, text: 'Лучший сервис для покупки Robux, пользуюсь уже год', avatar: '🌟' },
+    { id: 3, name: 'Максим', rating: 5, text: 'Честные цены и быстрая поддержка 24/7', avatar: '🚀' },
+    { id: 4, name: 'София', rating: 5, text: 'Купила для братика, всё пришло мгновенно!', avatar: '💎' },
+  ]);
 
   const recentPurchases = [
     { username: 'ProGamer2024', amount: 800, time: '1 минуту назад' },
@@ -73,12 +79,53 @@ const Index = () => {
     { id: 16, amount: 50000, price: 7999, badge: 'МИЛЛИОНЕР', popular: false },
   ];
 
-  const reviews = [
-    { id: 1, name: 'Даниил', rating: 5, text: 'Моментальная доставка! Робуксы пришли за 2 минуты', avatar: '🎮' },
-    { id: 2, name: 'Анастасия', rating: 5, text: 'Лучший сервис для покупки Robux, пользуюсь уже год', avatar: '🌟' },
-    { id: 3, name: 'Максим', rating: 5, text: 'Честные цены и быстрая поддержка 24/7', avatar: '🚀' },
-    { id: 4, name: 'София', rating: 5, text: 'Купила для братика, всё пришло мгновенно!', avatar: '💎' },
+  const allReviews = [
+    { name: 'Даниил', rating: 5, text: 'Моментальная доставка! Робуксы пришли за 2 минуты', avatar: '🎮' },
+    { name: 'Анастасия', rating: 5, text: 'Лучший сервис для покупки Robux, пользуюсь уже год', avatar: '🌟' },
+    { name: 'Максим', rating: 5, text: 'Честные цены и быстрая поддержка 24/7', avatar: '🚀' },
+    { name: 'София', rating: 5, text: 'Купила для братика, всё пришло мгновенно!', avatar: '💎' },
+    { name: 'Артём', rating: 5, text: 'Супер быстро, очень доволен сервисом!', avatar: '⚡' },
+    { name: 'Полина', rating: 5, text: 'Заказывала уже 5 раз, всегда всё отлично', avatar: '✨' },
+    { name: 'Кирилл', rating: 5, text: 'Надёжный магазин, рекомендую всем друзьям', avatar: '🏆' },
+    { name: 'Виктория', rating: 5, text: 'Лучшие цены в интернете, проверяла', avatar: '💰' },
+    { name: 'Александр', rating: 5, text: 'Поддержка ответила за минуту, круто!', avatar: '🎯' },
+    { name: 'Екатерина', rating: 5, text: 'Покупаю только здесь, никаких проблем', avatar: '🌈' },
+    { name: 'Дмитрий', rating: 5, text: 'Робуксы пришли мгновенно, спасибо!', avatar: '🔥' },
+    { name: 'Мария', rating: 5, text: 'Самый быстрый сервис из всех', avatar: '💫' },
+    { name: 'Никита', rating: 5, text: 'Всё работает как часы, доволен', avatar: '⏰' },
+    { name: 'Валерия', rating: 5, text: 'Безопасно и быстро, именно то что нужно', avatar: '🛡️' },
+    { name: 'Егор', rating: 5, text: 'Купил 10000 Robux, всё пришло за 3 минуты', avatar: '💎' },
+    { name: 'Алина', rating: 5, text: 'Отличный сервис, буду покупать ещё', avatar: '🎊' },
+    { name: 'Сергей', rating: 5, text: 'Никогда не было проблем, топ магазин', avatar: '👑' },
+    { name: 'Ольга', rating: 5, text: 'Дочка в восторге, робуксы пришли сразу', avatar: '🎁' },
+    { name: 'Илья', rating: 5, text: 'Быстро, дёшево, надёжно - что ещё нужно?', avatar: '🚀' },
+    { name: 'Дарья', rating: 5, text: 'Заказываю постоянно, всегда довольна', avatar: '🌟' },
   ];
+
+  useEffect(() => {
+    const addNewReview = () => {
+      const unusedReviews = allReviews.filter(
+        review => !reviews.some(r => r.name === review.name)
+      );
+      
+      if (unusedReviews.length > 0) {
+        const randomReview = unusedReviews[Math.floor(Math.random() * unusedReviews.length)];
+        const newReview = {
+          ...randomReview,
+          id: Date.now(),
+        };
+        
+        setReviews(prev => {
+          const updated = [newReview, ...prev];
+          return updated.slice(0, 8);
+        });
+      }
+    };
+
+    const reviewInterval = setInterval(addNewReview, 12000);
+
+    return () => clearInterval(reviewInterval);
+  }, [reviews]);
 
   const handleBuyClick = (pkg: typeof packages[0]) => {
     setSelectedPackage(pkg.id);
