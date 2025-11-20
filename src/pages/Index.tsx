@@ -31,8 +31,8 @@ const Index = () => {
       });
     };
 
-    const interval = setInterval(showRandomPurchase, 8000);
-    const initialTimeout = setTimeout(showRandomPurchase, 3000);
+    const interval = setInterval(showRandomPurchase, 5000);
+    const initialTimeout = setTimeout(showRandomPurchase, 2000);
 
     return () => {
       clearInterval(interval);
