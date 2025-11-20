@@ -89,6 +89,88 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Почему выбирают нас?</h2>
+            <p className="text-xl text-muted-foreground">Надёжно, быстро, выгодно</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="hover-lift text-center">
+              <CardHeader>
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Zap" size={32} className="text-primary" />
+                </div>
+                <CardTitle className="text-2xl mb-2">Мгновенная доставка</CardTitle>
+                <CardDescription className="text-base">
+                  Робуксы приходят на аккаунт автоматически через 2-5 минут после оплаты
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover-lift text-center">
+              <CardHeader>
+                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Shield" size={32} className="text-secondary" />
+                </div>
+                <CardTitle className="text-2xl mb-2">100% безопасность</CardTitle>
+                <CardDescription className="text-base">
+                  Официальная интеграция с Roblox API, защищённые платежи и гарантия возврата
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover-lift text-center">
+              <CardHeader>
+                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="DollarSign" size={32} className="text-accent" />
+                </div>
+                <CardTitle className="text-2xl mb-2">Лучшие цены</CardTitle>
+                <CardDescription className="text-base">
+                  Конкурентные цены на все пакеты, регулярные акции и скидки для постоянных клиентов
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover-lift text-center">
+              <CardHeader>
+                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Headphones" size={32} className="text-primary" />
+                </div>
+                <CardTitle className="text-2xl mb-2">Поддержка 24/7</CardTitle>
+                <CardDescription className="text-base">
+                  Команда поддержки всегда на связи в Telegram и Email, ответим за 5 минут
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover-lift text-center">
+              <CardHeader>
+                <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Users" size={32} className="text-secondary" />
+                </div>
+                <CardTitle className="text-2xl mb-2">10 000+ клиентов</CardTitle>
+                <CardDescription className="text-base">
+                  Тысячи довольных игроков уже получили свои Robux через наш сервис
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="hover-lift text-center">
+              <CardHeader>
+                <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Icon name="Award" size={32} className="text-accent" />
+                </div>
+                <CardTitle className="text-2xl mb-2">Проверенный сервис</CardTitle>
+                <CardDescription className="text-base">
+                  Работаем с 2020 года, рейтинг 4.9/5 и сотни положительных отзывов
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section id="packages" className="py-20 bg-card/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
